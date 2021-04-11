@@ -5,7 +5,7 @@ class Solution {
         int end=x/2;
         while(start<=end)  //Binary Search Concept
         {
-            int mid=start+(end-start)/2;
+            int mid=(start+end)/2;
             int y=x/mid;
             if(y==mid) return mid;
             if(y>mid) start=mid+1;
@@ -16,3 +16,5 @@ class Solution {
         return end;
     }
 }
+
+//took the help of the discussion platform
