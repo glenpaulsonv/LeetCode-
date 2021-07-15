@@ -17,3 +17,18 @@ class Solution {
 }
 
 //solution 1 - ^ took the help of leetcode solution
+
+
+
+class Solution {
+    public int singleNumber(int[] nums) {
+        int a = 0;
+        for(int i:nums)
+        {
+            a = a^i;
+        }
+        return a;
+    }
+}
+
+//Solution 2 - using bit manipulation - took the help of leetcode solution
