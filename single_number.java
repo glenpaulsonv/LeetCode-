@@ -32,3 +32,23 @@ class Solution {
 }
 
 //Solution 2 - using bit manipulation - took the help of leetcode solution
+
+class Solution {
+    public int singleNumber(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        int sumOfSet = 0;
+        int sumOfNum = 0;
+        for(int i:nums)
+        {
+            if(!set.contains(i))
+            {
+                set.add(i);
+                sumOfSet+=i;
+            }
+            sumOfNum+=i;            
+        }
+        return 2*sumOfSet - sumOfNum;
+    }
+}
+
+//Solution 3 - using sets - took the help of leetcode solution
