@@ -1,27 +1,26 @@
 class Solution {
     public int[] plusOne(int[] digits) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         int carry=1;
         int n=digits.length;
-        for(int i=n-1;i>-1;i--)
+        for(int i=n-1;i>=0;i--)
         {
-            int sum=digits[i]+carry;
-            int val=sum%10;
-            carry=sum/10;
-            result.add(val);
+            int value=(digits[i]+carry)%10;
+            carry = (digits[i]+carry)/10;
+            list.add(value);
         }
         if(carry>0)
         {
-            result.add(carry);
+            list.add(carry);
         }
-        int[] finalArr = new int[result.size()];
+        int[] finalArr=new int[list.size()];
         int i=0;
-        for(int k=result.size()-1;k>-1;k--)
+        for(int k=list.size()-1;k>=0;k--)
         {
-            finalArr[i]=result.get(k);
+            finalArr[i]=list.get(k);
             i++;
         }
         return finalArr;
-        
     }
 }
+
